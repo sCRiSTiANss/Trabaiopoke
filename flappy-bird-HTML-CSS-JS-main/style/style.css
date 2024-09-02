@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --positionMoment: 50%;
+    --positionJumpFinal: 50%;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+
+.gameBoard {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;            /*corta o conteudo que ultrapassa o tamanho da div*/  
+}
+
+.gameLowBrightness {
+    filter: brightness(70%);
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    height: 40vh;
+    width: 40vw;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: tomato; */
+    bottom: 30%;
+}
+
+.nameGame {
+    font-family: 'Silkscreen', cursive;
+    color: orange;
+    font-size: 12vh;
+    letter-spacing: -7px;
+    line-height: 0.5;
+    text-shadow: black 3px 3px;
+}
+
+.pointsMenu {
+    font-family: 'Silkscreen', cursive;
+    color: white;
+    font-size: 13vh;
+    letter-spacing: -7px;
+    text-shadow: black 3px 3px;
+}
+
+.iconPlay {
+    width: 18vh;
+    margin-left: 12px;
+}
+
+.points {
+    width: 100%;
+    position: absolute;
+    font-family: 'Silkscreen', cursive;
+    color: white;
+    font-size: 13vh;
+    letter-spacing: -7px;
+    text-align: center;
+    z-index: 1;
+    text-shadow: black 3px 3px;
+    display: none;
+}
+
+.background {
+    position: fixed;
+    width: 100%;
+    bottom: 10%;
+    filter: blur(1px) saturate(80%);
+}
+
+.pipeNormal {
+    bottom: 0;
+}
+
+.pipes > img {                  /*pega apenas os img filhos de pipes*/
+    position: absolute;         /*nao interfere no conteudo de outras imagens*/
+    height: 35%;
+}
+
+.pipeAnimation {
+    animation: animationPipes 4s infinite linear;
+}
+
+.bird {
+    position: absolute;
+    height: 7%;
+    bottom: var(--positionMoment);
+    right: 85%;
+}
+
+.jumpBird {
+    animation: animationJumpBird 500ms ease-out;
+}
+
+.fallBird {
+    animation: animationFallBird 1.2s ease-in;
+}
+
+.floor {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    bottom: 0;
+}
+
+.invincible {
+    opacity: 0.5;
+}
+
+.coin {
+    position: absolute;
+    width: 5%;
+    right: 100%;
+    bottom: 50%;
+    animation: animationCoin 6s infinite linear;
+}
+
+
+.button-container {
+    display: flex; /* Alinha os botões horizontalmente */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    gap: 10px; /* Espaço entre os botões */
+
+}
+
