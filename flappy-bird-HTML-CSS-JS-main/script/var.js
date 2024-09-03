@@ -8,7 +8,6 @@ const menu = document.querySelector('.menu');
 const buttonPlay = document.querySelector('.iconPlay');
 const gameBoard = document.querySelector('.gameBoard');
 const coin = document.querySelector('.coin');
-const difficultyButton = document.querySelectorAll('.difficultyButton');
 
 var points = 0;
 var highScore = 0;
